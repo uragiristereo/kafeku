@@ -6,6 +6,7 @@ import androidx.compose.material.ContentAlpha
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material.primarySurface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -19,6 +20,10 @@ fun MainBottomNavigationBar(
     modifier: Modifier = Modifier,
 ) {
     BottomNavigation(
+        backgroundColor = when {
+            MaterialTheme.colors.isLight -> MaterialTheme.colors.background
+            else -> MaterialTheme.colors.primarySurface
+        },
         modifier = modifier,
     ) {
         MainBottomNavigationItems.values().forEach { item ->

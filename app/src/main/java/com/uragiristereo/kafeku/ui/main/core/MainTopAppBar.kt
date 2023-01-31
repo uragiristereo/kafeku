@@ -5,6 +5,7 @@ import androidx.compose.material.ContentAlpha
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
+import androidx.compose.material.primarySurface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
@@ -17,6 +18,10 @@ fun MainTopAppBar(
     modifier: Modifier = Modifier,
 ) {
     TopAppBar(
+        backgroundColor = when {
+            MaterialTheme.colors.isLight -> MaterialTheme.colors.background
+            else -> MaterialTheme.colors.primarySurface
+        },
         title = {
             Column {
                 Text(text = "Kafeku")
