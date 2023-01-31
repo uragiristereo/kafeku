@@ -26,7 +26,7 @@ fun PesananItem(
             modifier = modifier.fillMaxWidth(),
         ) {
             Text(
-                text = "Nama",
+                text = "Nama:",
                 fontSize = 16.sp,
             )
 
@@ -41,7 +41,7 @@ fun PesananItem(
             modifier = modifier.fillMaxWidth(),
         ) {
             Text(
-                text = "Harga",
+                text = "Harga:",
                 fontSize = 16.sp,
             )
 
